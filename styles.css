@@ -67,7 +67,10 @@
     display: block;
 }
 .shake{
-    animation: shake 0.3s;
+    animation: shake 0.3s !important;
+}
+.error-border{
+    border: 1px solid red !important;
 }
 @keyframes shake {
     0% { transform: translateX(0); }
