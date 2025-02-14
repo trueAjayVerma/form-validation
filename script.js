@@ -123,3 +123,13 @@ password2.addEventListener("input", () => {
     password2.classList.remove("error-border");
 
 })
+
+email.addEventListener("blur", () => {
+    if (email.value != "") {
+        if (email.value.indexOf("@") < 1 || email.value.lastIndexOf(".") < email.value.indexOf("@") + 2 || email.value.lastIndexOf(".") + 2 >= email.value.length) {
+            emailError.innerHTML = "Please Enter A Valid Email Address"
+            emailError.classList.add("showerror")
+            email.classList.add("error-border");
+        }
+    }
+})
